@@ -150,7 +150,7 @@ OAuth2Provider.prototype.oauth = function() {
 
       switch(response_type) {
         case 'code': url += '?'; break;
-        case 'token': url += '#'; break;
+        case 'token': url += '?'; break;
         default:
           res.writeHead(400);
           return res.end('invalid response_type requested');
